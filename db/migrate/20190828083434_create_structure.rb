@@ -1,7 +1,5 @@
 class CreateStructure < ActiveRecord::Migration[6.0]
     def self.up
-      drop_table :users
-      drop_table :clock_events
         create_table :users do |t|
           t.timestamps null:false
           t.string :first_name
