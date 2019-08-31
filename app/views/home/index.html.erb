@@ -1,0 +1,27 @@
+<h1>Hi Mama Clock In/Out</h1>
+
+<%= form_for :clock_events, url: { controller:"clock_events", action: "new" } do |form| %>
+
+  <p>
+    <h6> Your LogIn Id: </h6>
+    <%= form.text_field(:login,value:@user['login'],:required => true)%>
+    <br>
+    <h6> First Name:</h6>
+    <%= form.text_field(:first_name,value:@user['first_name'],:required => true)%>
+  </p>
+  <br>
+  <p>
+    <%= form.radio_button(:clock_event,"IN",required: 'required') %> <%= form.label('Clock In') %>
+    <%= form.radio_button(:clock_event,"OUT" ,required: 'required') %> <%= form.label('Clock Out') %>
+  </p>
+  <br>
+
+  <p>
+    <%= form.submit('Submit') %>
+  </p>
+
+<% end %>
+
+<form>
+
+</form>

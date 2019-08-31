@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  belongs_to: 
+  type: 2019-08-31 19:24:58
+
+two:
+  belongs_to: 
+  type: 2019-08-31 19:24:58
