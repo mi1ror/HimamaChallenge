@@ -1,0 +1,20 @@
+<h1>All ClockEvents </h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>
+    Time   
+    </th>
+
+    <th> Clocktype</th>
+    </th>
+  </tr>
+
+  <% @clocked_events.each do |ce| %>
+    <tr>
+      <td><%= "#{ce.time}" %></td>
+      <td><%= "#{ce.clocktype}" %></td>
+      
+    </tr>
+  <% end %>
+</table>
