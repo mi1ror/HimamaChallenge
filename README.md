@@ -5,7 +5,7 @@ Following are few highlights of the Himama ruby on rails clock in and clock out 
 
 * rails 6
 
-* Database creation: rake db:setup
+* Database creation:  rake db:setup ==> Runs db:create, db:schema:load and db:seed.
 
-* Database initialization rake db:migrate
+* Database initialization rake db:migrate 
 
