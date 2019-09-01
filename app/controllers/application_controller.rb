@@ -12,13 +12,12 @@ class ApplicationController < ActionController::Base
     end
 
     def current_user
+
         if defined?(@user)
             return @user
         end
         
-        if request.env['PATH_INFO'] =~ /show/
-            return true
-        end
+       
        
     end
 

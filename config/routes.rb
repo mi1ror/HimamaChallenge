@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 	post '/users/new' => 'home#index'
 	post 'home/index'
 	post 'clock_events/new' 
+	post 'clock_events/show' 
 	get 'clock_events/show'
 
 end

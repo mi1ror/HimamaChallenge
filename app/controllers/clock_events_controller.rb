@@ -1,6 +1,7 @@
 class ClockEventsController < ApplicationController
   
     def show
+       @user = User.find_or_create_by(id:params[:id])
         if !@clocked_events
             @clocked_events  = ClockEvent.where(user_id: params[:id])
            

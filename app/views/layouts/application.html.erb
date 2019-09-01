@@ -15,19 +15,28 @@
   <body>
 
       <nav class="navbar navbar-light bg-light">
-       <%= link_to "Home", {:controller => "application", :action => "index"} %>
+       <% if current_user  %>
+        <%= link_to "Sign Out", {:controller => "application", :action => "index"} %>
+       <% end %>
         <a class="navbar-brand">Hi Mama</a>
         <form class="form-inline">
+         
+         
           <% if !current_user  %>
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Login
+            Sign In
           
           </button>
           <% else %>
-          <div class = "btn btn-info btn-block" style="color:white">
-            <%= link_to "Show All Events", {:controller => "clock_events", :action => "show", :id => current_user.id } %>
-          </div>
-         
+            <% if current_user.login && (request.env['PATH_INFO'] =~ /users/ || request.env['PATH_INFO'] =~ /home/)%>
+          
+              <div class = "btn btn-info btn-block" style="color:white">
+                <%= link_to "Show All Events!", {:controller => "clock_events", :action => "show", :id => current_user.id } %>
+              </div>
+            <% elsif request.env['PATH_INFO'] =~ /clock_events/ %>
+              <%= link_to "Mark another clock event!", {:controller => "home", :action => "index", :id => @user } %>
+            <% end %>
+
           <% end %>  
         </form>
       </nav>
