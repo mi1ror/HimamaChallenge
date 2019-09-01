@@ -1,24 +1,11 @@
 # README
+Following are few highlights of the Himama ruby on rails clock in and clock out app, with live demo at: https://frozen-falls-76574.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* ruby 2.6.4p104
 
-Things you may want to cover:
+* Database creation: rake db:setup
 
-* Ruby version
+* Database initialization rake db:migrate
 
-* System dependencies
+* heroku live dome: https://frozen-falls-76574.herokuapp.com/
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
